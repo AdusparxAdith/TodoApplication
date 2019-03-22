@@ -30,9 +30,11 @@ class App extends Component {
 /////////////////////////////////////////////////////// LIFE-CYCLE METHODS
   componentDidMount(){
 
-    let currentDay = new Date().getDate()
-    if(currentDay > localStorage.getItem('updatedOn')){
-
+    let currentDay = new Date()
+    console.log(currentDay)
+    let updatedDay = new Date(localStorage.getItem('updatedOn'))
+    if((currentDay - updatedDay) >= 86400000){
+      
       
       const specialTodos = require('./resources/specialTodos')
       const splTodo = specialTodos[Math.floor(Math.random()*specialTodos.length)];
