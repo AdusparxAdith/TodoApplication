@@ -29,8 +29,9 @@ class TodoItem extends Component{
     }
 
     getTodoStyle = () => {
-  
-        return{
+
+        if(!this.props.todo.special){
+            return{
             background: '#f1f2f6',
             padding: '2px 12px',
             borderBottom: '1px #ccc dotted',
@@ -38,7 +39,19 @@ class TodoItem extends Component{
             textDecoration : this.props.todo.completed ? 'line-through' : 'none',
             fontSize: '110%',
             fontFamily: 'Overlock',
-            transition: '1s',   
+            transition: '1s', 
+            }
+        }
+        // SPECIAL TASK RETURN
+        return{
+            background: '#f1f2f6',
+            border: '4px solid #FFCF40',
+            padding: '2px 12px',
+            color: this.props.todo.completed ? this.props.theme.line : 'black',
+            textDecoration : this.props.todo.completed ? 'line-through' : 'none',
+            fontSize: '110%',
+            fontFamily: 'Overlock',
+            transition: '1s',    
         }   
     }
 

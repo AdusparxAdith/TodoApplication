@@ -28,7 +28,20 @@ class App extends Component {
 
 
 /////////////////////////////////////////////////////// LIFE-CYCLE METHODS
+  componentDidMount(){
 
+    let currentDay = new Date().getDate()
+    if(currentDay > localStorage.getItem('updatedOn')){
+
+      
+      const specialTodos = require('./resources/specialTodos')
+      const splTodo = specialTodos[Math.floor(Math.random()*specialTodos.length)];
+      splTodo.id = uuid.v4()
+      
+      this.setState({todos: [...this.state.todos,splTodo]})
+      localStorage.setItem('updatedOn',currentDay)
+    }
+  }
   componentWillUpdate(nextProps, nextState){
     localStorage.setItem('storedTodos', JSON.stringify(nextState.todos))
     localStorage.setItem('storedTheme', JSON.stringify(nextState.theme))
@@ -38,7 +51,7 @@ class App extends Component {
 
   componentWillMount(){
     localStorage.getItem('storedTodos') && this.setState({
-      todos: JSON.parse(localStorage.getItem('storedTodos'))
+      todos: JSON.parse(localStorage.getItem('storedTodos')) 
     })
     localStorage.getItem('storedTheme') && this.setState({
       theme: JSON.parse(localStorage.getItem('storedTheme'))
@@ -60,13 +73,18 @@ class App extends Component {
     })
   }
   addTodo = (title) => {
+
+
     const newTodo = {
       id:uuid.v4(),
       task:title,
       completed: false
     }
 
+
     this.setState({todos: [...this.state.todos, newTodo]})
+    
+    
   }
 
   delTask = (id) => {
