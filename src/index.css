@@ -39,7 +39,7 @@ button,input{
   color: #16a085;
 }
 .yellowtodo::placeholder, .yellowtodo input{
-  color: #fff176;
+  color: #000;
 }
 .bluetodo::placeholder, .bluetodo input{
   color: #2d98da; 
