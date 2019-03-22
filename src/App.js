@@ -31,6 +31,7 @@ class App extends Component {
 
   componentWillUpdate(nextProps, nextState){
     localStorage.setItem('storedTodos', JSON.stringify(nextState.todos))
+    localStorage.setItem('storedTheme', JSON.stringify(nextState.theme))
     localStorage.setItem('timestamp', Date.now())
 
   }
@@ -38,6 +39,9 @@ class App extends Component {
   componentWillMount(){
     localStorage.getItem('storedTodos') && this.setState({
       todos: JSON.parse(localStorage.getItem('storedTodos'))
+    })
+    localStorage.getItem('storedTheme') && this.setState({
+      theme: JSON.parse(localStorage.getItem('storedTheme'))
     })
   }
 
