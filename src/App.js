@@ -84,7 +84,6 @@ class App extends Component {
     )
   }
   render() {
-
     return (
       <div>
               <Header theme={this.state.theme.header} changeTheme={this.changeTheme}/>

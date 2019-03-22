@@ -39,7 +39,7 @@ class TodoItem extends Component{
 
         return(
             <div style={this.getTodoStyle()}>
-                <p><input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '}
+                <p><input type="checkbox" defaultChecked={this.props.todo.completed} onChange={this.props.markComplete.bind(this, id)}/> {' '}
                 {task}
                 <button style={this.getCrossStyle()} onClick={this.props.delTask.bind(this,id)}>-</button>
                 </p>
