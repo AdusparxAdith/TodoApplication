@@ -38,7 +38,7 @@ button,input{
 .greentodo::placeholder, .greentodo input{
   color: #16a085;
 }
-.yellowtodo::placeholder, .yellowtodo input{
+.yellowtodo::placeholder, .yellowtodo input, .blacktodo::placeholder, .blacktodo input{
   color: #000;
 }
 .bluetodo::placeholder, .bluetodo input{

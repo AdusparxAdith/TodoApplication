@@ -63,7 +63,20 @@ module.exports = [
           },
           placeholder: 'bluetodo'
       },
-     
-   
-   
+      {   id:666,
+        header:{
+          background: 'black',
+          color: '#fff'
+        },
+        subButton:{
+          background: 'black',
+          color: '#fff'
+        },
+        clearButton:{
+          background:'black',
+          color:'#fff',
+          line: 'black'
+        },
+        placeholder: 'blacktodo'
+      }  
 ]
