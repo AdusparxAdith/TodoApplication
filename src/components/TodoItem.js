@@ -45,7 +45,7 @@ class TodoItem extends Component{
         // SPECIAL TASK RETURN
         return{
             background: '#f1f2f6',
-            border: '4px solid #FFCF40',
+            border: '1.5px solid #FFCF40',
             padding: '2px 12px',
             color: this.props.todo.completed ? this.props.theme.line : 'black',
             textDecoration : this.props.todo.completed ? 'line-through' : 'none',
