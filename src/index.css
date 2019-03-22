@@ -25,18 +25,24 @@ button,input{
   outline: none;
 }
 
-
-.addtodo::placeholder{
-  color: #eb3b5a;
+.todo::placeholder{
   font-size: 110%;
   font-family: 'Overlock';
-  opacity: 10; 
+  opacity: 10;
 }
 
-::placeholder{
-  font-size: 110%;
-  font-family: 'Overlock';
-  opacity: 10; 
+.redtodo::placeholder, .redtodo input{
+  color: #eb3b5a;
+}
+
+.greentodo::placeholder, .greentodo input{
+  color: #16a085;
+}
+.yellowtodo::placeholder, .yellowtodo input{
+  color: #fff176;
+}
+.bluetodo::placeholder, .bluetodo input{
+  color: #2d98da; 
 }
 
 

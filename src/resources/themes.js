@@ -12,7 +12,8 @@ module.exports = [
             background: '#fc5c65',
             color: '#fff',
             line: '#fc5c65',
-          }
+          },
+          placeholder: 'redtodo'
       },
       {   id:4,
         header:{
@@ -27,7 +28,8 @@ module.exports = [
           background:'#1abc9c',
           color:'#fff',
           line: '#1abc9c'
-        }
+        },
+        placeholder: 'greentodo'
       },
       {   id:3,
         header:{
@@ -42,7 +44,8 @@ module.exports = [
           background:'#FBEDBA',
           color:'#130f40',
           line: '#000000'
-        }
+        },
+        placeholder: 'yellowtodo'
       },
       {   id:2,
         header:{
@@ -57,7 +60,8 @@ module.exports = [
             background:'#45aaf2',
             color:'#fff',
             line: '#45aaf2'
-          }
+          },
+          placeholder: 'bluetodo'
       },
      
    

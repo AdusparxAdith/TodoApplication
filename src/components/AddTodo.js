@@ -6,8 +6,12 @@ state = {
     placeholder: 'Add Todo..',
 }
 
+componentWillUpdate(nextProps, nextState){
+    errorstyle = nextProps.theme.placeholder
+  }
+
 getSubmitStyle = () => {
-    const {background,color} = this.props.theme
+    const {background,color} = this.props.theme.subButton
     return{
         background,
         color,
@@ -35,7 +39,7 @@ onSubmit = (e) => {
         this.setState({
             placeholder: 'Add a valid Todo and try again..'
         })
-        errorstyle = 'addtodo'
+        
     }
     
     
@@ -50,6 +54,7 @@ takeInput = (e) =>{
     )
 }
     render(){
+        errorstyle = this.props.theme.placeholder
         return(
             <form style={{display: 'flex'}}>
             <input 
@@ -57,7 +62,7 @@ takeInput = (e) =>{
                 name="title"
                 style={{flex: '10', padding:'15px'}}
                 placeholder= {this.state.placeholder}
-                className={errorstyle}
+                className= {`todo ${errorstyle}`}
                 value = {this.state.title}
                 onChange = {this.takeInput}
             />

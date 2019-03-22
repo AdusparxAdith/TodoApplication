@@ -4,7 +4,15 @@ import PropTypes from 'prop-types'
 
 
 class TodoItem extends Component{
-    
+
+    // delTaskEvent = (id) =>{
+    //     this.setState({
+    //         deleted: true
+    //     })
+    //     console.log(this.state)
+    //     this.props.delTask(id)
+    // }
+
     getCrossStyle = () => {
         const {background,color} = this.props.theme
         return{

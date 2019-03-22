@@ -91,7 +91,7 @@ class App extends Component {
     return (
       <div>
               <Header theme={this.state.theme.header} changeTheme={this.changeTheme}/>
-              <AddTodo addTodo={this.addTodo} theme={this.state.theme.subButton}/>
+              <AddTodo addTodo={this.addTodo} theme={this.state.theme} />
               <TodoList tasks={this.state.todos} markComplete={this.markComplete} delTask={this.delTask} theme={this.state.theme.clearButton}/>  
               <Footer />   
       </div>    
