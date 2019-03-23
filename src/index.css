@@ -50,3 +50,7 @@ input {
 .bluetodo input {
   color: #2d98da;
 }
+.purpletodo::placeholder,
+.purpletodo input {
+  color: #8854d0;
+}

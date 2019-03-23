@@ -36,19 +36,19 @@ module.exports = [
   {
     id: 3,
     header: {
-      background: "#fff176",
-      color: "#000000"
+      background: "#8854d0",
+      color: "#fff"
     },
     subButton: {
-      background: "#fff59d",
-      color: "#000000"
+      background: "#a55eea",
+      color: "#fff"
     },
     clearButton: {
-      background: "#FBEDBA",
-      color: "#130f40",
-      line: "#000000"
+      background: "#a55eea",
+      color: "#fff",
+      line: "#8854d0"
     },
-    placeholder: "yellowtodo"
+    placeholder: "purpletodo"
   },
   {
     id: 2,
