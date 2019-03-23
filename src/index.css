@@ -27,7 +27,7 @@ input {
   outline: none;
 }
 
-.todo::placeholder {
+.addTodo::placeholder {
   font-size: 110%;
   font-family: "Overlock";
   opacity: 10;
@@ -55,4 +55,13 @@ input {
 .purpletodo::placeholder,
 .purpletodo input {
   color: #8854d0;
+}
+
+.todoItem {
+  background: #f1f2f6;
+  transition: background-color 0.2s ease-out;
+}
+.todoItem:hover {
+  background-color: #dfe4ea;
+  cursor: pointer;
 }

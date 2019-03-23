@@ -54,7 +54,7 @@ export default class AddTodo extends React.Component {
           name="title"
           style={{ flex: "10", padding: "15px" }}
           placeholder={this.state.placeholder}
-          className={`todo ${errorstyle}`}
+          className={`addTodo ${errorstyle}`}
           value={this.state.title}
           onChange={this.takeInput}
         />

@@ -28,14 +28,12 @@ class TodoItem extends Component {
   getTodoStyle = () => {
     if (!this.props.todo.special) {
       return {
-        background: "#f1f2f6",
         padding: "2px 12px",
         borderBottom: "1px #ccc dotted",
         color: this.props.todo.completed ? this.props.theme.line : "black",
         textDecoration: this.props.todo.completed ? "line-through" : "none",
         fontSize: "110%",
-        fontFamily: "Overlock",
-        transition: "1s"
+        fontFamily: "Overlock"
       };
     }
     // SPECIAL TASK RETURN
@@ -55,7 +53,7 @@ class TodoItem extends Component {
     const { id, task } = this.props.todo;
 
     return (
-      <div style={this.getTodoStyle()}>
+      <div className="todoItem" style={this.getTodoStyle()}>
         <p>
           <input
             type="checkbox"
