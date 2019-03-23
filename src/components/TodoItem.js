@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Hammer from "react-hammerjs";
 
 class TodoItem extends Component {
   constructor() {
@@ -61,26 +62,28 @@ class TodoItem extends Component {
   render() {
     const { id, task } = this.props.todo;
     return (
-      <div
-        onClick={this.props.markComplete.bind(this, id)}
-        className={`todoItem ${this.state.flag ? "tododel" : ""}`}
-        style={this.getTodoStyle()}
-      >
-        <p>
-          {/* <input
+      <Hammer onSwipe={this.delTaskEvent.bind(this, id)}>
+        <div
+          onClick={this.props.markComplete.bind(this, id)}
+          className={`todoItem ${this.state.flag ? "tododel" : ""}`}
+          style={this.getTodoStyle()}
+        >
+          <p>
+            {/* <input
             type="checkbox"
             defaultChecked={this.props.todo.completed}
             onChange={this.props.markComplete.bind(this, id)}
           />{" "} */}
-          {task}
-          <button
-            style={this.getCrossStyle()}
-            onClick={this.delTaskEvent.bind(this, id)}
-          >
-            -
-          </button>
-        </p>
-      </div>
+            {task}
+            <button
+              style={this.getCrossStyle()}
+              onClick={this.delTaskEvent.bind(this, id)}
+            >
+              -
+            </button>
+          </p>
+        </div>
+      </Hammer>
     );
   }
 }
