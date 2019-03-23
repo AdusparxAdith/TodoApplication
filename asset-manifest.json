@@ -1,13 +1,13 @@
 {
-  "main.css": "/TodoApplication/static/css/main.71ddde2e.chunk.css",
-  "main.js": "/TodoApplication/static/js/main.54a1109c.chunk.js",
-  "main.js.map": "/TodoApplication/static/js/main.54a1109c.chunk.js.map",
+  "main.css": "/TodoApplication/static/css/main.8bd0366f.chunk.css",
+  "main.js": "/TodoApplication/static/js/main.a1b14418.chunk.js",
+  "main.js.map": "/TodoApplication/static/js/main.a1b14418.chunk.js.map",
   "runtime~main.js": "/TodoApplication/static/js/runtime~main.cf8d2b92.js",
   "runtime~main.js.map": "/TodoApplication/static/js/runtime~main.cf8d2b92.js.map",
-  "static/js/2.2d83d18f.chunk.js": "/TodoApplication/static/js/2.2d83d18f.chunk.js",
-  "static/js/2.2d83d18f.chunk.js.map": "/TodoApplication/static/js/2.2d83d18f.chunk.js.map",
+  "static/js/2.646c37f9.chunk.js": "/TodoApplication/static/js/2.646c37f9.chunk.js",
+  "static/js/2.646c37f9.chunk.js.map": "/TodoApplication/static/js/2.646c37f9.chunk.js.map",
   "index.html": "/TodoApplication/index.html",
-  "precache-manifest.62f0ebe3449cba9f42f94cab8c6706b0.js": "/TodoApplication/precache-manifest.62f0ebe3449cba9f42f94cab8c6706b0.js",
+  "precache-manifest.4430d8133e99791b223044c32af312da.js": "/TodoApplication/precache-manifest.4430d8133e99791b223044c32af312da.js",
   "service-worker.js": "/TodoApplication/service-worker.js",
-  "static/css/main.71ddde2e.chunk.css.map": "/TodoApplication/static/css/main.71ddde2e.chunk.css.map"
+  "static/css/main.8bd0366f.chunk.css.map": "/TodoApplication/static/css/main.8bd0366f.chunk.css.map"
 }
