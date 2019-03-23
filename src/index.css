@@ -89,3 +89,7 @@ img {
   left: 50%;
   right: 50%;
 }
+
+.themeBar:hover {
+  transform: scale(1.1);
+}

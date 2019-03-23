@@ -12,12 +12,14 @@ export default class Header extends React.Component {
       borderRadius: "50%",
       cursor: "pointer",
       margin: "0 2px",
-      boxShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)"
+      boxShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
+      transition: "all .1s ease-in-out"
     };
   };
   render() {
     return (
       <button
+        className="themeBar"
         style={this.getButtonStyle()}
         onClick={this.props.changeTheme.bind(this, this.props.theme.id)}
       />
