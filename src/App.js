@@ -21,7 +21,8 @@ class App extends Component {
         background: "#fc5c65",
         color: "#fff",
         line: "#fc5c65"
-      }
+      },
+      placeholder: "redtodo"
     }
   };
 

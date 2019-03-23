@@ -75,7 +75,7 @@ input {
 }
 
 .tododel {
-  animation: delete 0.7s;
+  animation: delete 0.6s;
 }
 
 .todoItem:hover {

@@ -16,7 +16,7 @@ class TodoItem extends Component {
     });
     setTimeout(() => {
       this.props.delTask(id);
-    }, 700);
+    }, 600);
   };
 
   getCrossStyle = () => {
@@ -62,10 +62,11 @@ class TodoItem extends Component {
     const { id, task } = this.props.todo;
     return (
       <div
+        onClick={this.props.markComplete.bind(this, id)}
         className={`todoItem ${this.state.flag ? "tododel" : ""}`}
         style={this.getTodoStyle()}
       >
-        <p onClick={this.props.markComplete.bind(this, id)}>
+        <p>
           {/* <input
             type="checkbox"
             defaultChecked={this.props.todo.completed}
