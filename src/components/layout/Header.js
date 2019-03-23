@@ -1,5 +1,6 @@
 import React from "react";
 import ThemeBar from "../ThemeBar";
+const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/logo.png");
 
 export default class Header extends React.Component {
   // state={
@@ -23,6 +24,9 @@ export default class Header extends React.Component {
   };
 
   render() {
+    const width = window.screen.width;
+    const height = window.screen.width;
+    console.log(width, height);
     const themeArr = require("../../resources/themes");
     return (
       <div>
@@ -32,6 +36,7 @@ export default class Header extends React.Component {
         <header style={this.getStyle()}>
           <h1>TodoList</h1>
         </header>
+        <img src={url} width="30px" />
       </div>
     );
   }

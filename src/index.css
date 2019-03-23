@@ -82,3 +82,10 @@ input {
   background-color: #dfe4ea;
   cursor: pointer;
 }
+
+img {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  right: 50%;
+}
