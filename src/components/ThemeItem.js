@@ -5,7 +5,6 @@ export default class Header extends React.Component {
     const { background } = this.props.theme.header;
     return {
       background,
-      border: "2px solid white",
       fontSize: "90%",
       height: "20px",
       width: "20px",

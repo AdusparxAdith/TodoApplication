@@ -1,17 +1,20 @@
 import React from "react";
 import ThemeBar from "../ThemeBar";
+import Hammer from "react-hammerjs";
 const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/logo.png");
 
 export default class Header extends React.Component {
-  // state={
-  //     display: 'visible'
-  // }
+  state = {
+    secret: false
+  };
 
-  // toggleBar = () =>{
-  //     this.setState({display:'none'})
-  // }
+  secretCSS = () => {
+    this.setState(prevState => ({
+      secret: !prevState.secret
+    }));
+  };
 
-  getStyle = () => {
+  getHeaderStyle = () => {
     const { background, color } = this.props.theme;
     return {
       background,
@@ -19,24 +22,33 @@ export default class Header extends React.Component {
       textAlign: "center",
       padding: "10px",
       cursor: "pointer",
-      transition: "0.9s"
+      transition: "all 0.9s"
     };
   };
 
   render() {
-    const width = window.screen.width;
-    const height = window.screen.width;
-    console.log(width, height);
     const themeArr = require("../../resources/themes");
     return (
       <div>
         <div className="themeBar" style={themeBarStyle}>
           <ThemeBar themeArr={themeArr} changeTheme={this.props.changeTheme} />
         </div>
-        <header style={this.getStyle()}>
-          <h1>TodoList</h1>
-        </header>
-        <img src={url} width="30px" />
+        <Hammer onDoubleTap={this.secretCSS}>
+          <header
+            className={this.state.secret ? "secretGlow" : "secretGlowR"}
+            style={this.getHeaderStyle()}
+          >
+            <h1>
+              Todo<span id={this.state.secret ? "spanClass" : ""}>L</span>ist
+            </h1>
+          </header>
+        </Hammer>
+        <img
+          className={this.state.secret ? "imgShake" : ""}
+          src={url}
+          alt="Failed to load"
+          width="30px"
+        />
       </div>
     );
   }

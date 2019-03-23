@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div style={footerStyle}>
-      <p>~Made with love, by Adusparx ~ v1.0</p>
+      <p>~Made with love, by Adusparx ~ v2.0</p>
     </div>
   );
 }
