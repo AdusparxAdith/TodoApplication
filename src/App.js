@@ -31,7 +31,7 @@ class App extends Component {
     let currentDay = new Date();
     console.log(currentDay);
     let updatedDay = new Date(localStorage.getItem("updatedOn"));
-    if (currentDay - updatedDay >= 86400000) {
+    if (currentDay - updatedDay >= 43200000) {
       const specialTodos = require("./resources/specialTodos");
       const splTodo =
         specialTodos[Math.floor(Math.random() * specialTodos.length)];
