@@ -64,16 +64,15 @@ class TodoItem extends Component {
     return (
       <Hammer onSwipe={this.delTaskEvent.bind(this, id)}>
         <div
-          onClick={this.props.markComplete.bind(this, id)}
           className={`todoItem ${this.state.flag ? "tododel" : ""}`}
           style={this.getTodoStyle()}
         >
           <p>
-            {/* <input
-            type="checkbox"
-            defaultChecked={this.props.todo.completed}
-            onChange={this.props.markComplete.bind(this, id)}
-          />{" "} */}
+            <input
+              type="checkbox"
+              defaultChecked={this.props.todo.completed}
+              onChange={this.props.markComplete.bind(this, id)}
+            />{" "}
             {task}
             <button
               style={this.getCrossStyle()}
