@@ -78,7 +78,7 @@ class App extends Component {
       completed: false
     };
 
-    this.setState({ todos: [...this.state.todos, newTodo] });
+    this.setState({ todos: this.state.todos.concat(newTodo) });
   };
 
   delTask = id => {

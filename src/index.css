@@ -3,6 +3,7 @@ html {
   font-family: "Overlock", cursive;
   outline: none;
   user-select: none;
+  overflow: hidden;
 }
 body {
   margin: 0;
@@ -57,10 +58,26 @@ input {
   color: #8854d0;
 }
 
+@keyframes delete {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+    visibility: hidden;
+  }
+}
+
 .todoItem {
   background: #f1f2f6;
-  transition: background-color 0.2s ease-out;
+  position: relative;
+  transition: background 0.2s ease-out;
 }
+
+.tododel {
+  animation: delete 0.7s;
+}
+
 .todoItem:hover {
   background-color: #dfe4ea;
   cursor: pointer;

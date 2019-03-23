@@ -2,13 +2,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class TodoItem extends Component {
-  // delTaskEvent = (id) =>{
-  //     this.setState({
-  //         deleted: true
-  //     })
-  //     console.log(this.state)
-  //     this.props.delTask(id)
-  // }
+  constructor() {
+    super();
+    this.state = {
+      flag: false
+    };
+    this.delTaskEvent = this.delTaskEvent.bind(this);
+  }
+
+  delTaskEvent = id => {
+    this.setState({
+      flag: true
+    });
+    setTimeout(() => {
+      this.props.delTask(id);
+    }, 700);
+  };
 
   getCrossStyle = () => {
     const { background, color } = this.props.theme;
@@ -51,19 +60,21 @@ class TodoItem extends Component {
 
   render() {
     const { id, task } = this.props.todo;
-
     return (
-      <div className="todoItem" style={this.getTodoStyle()}>
-        <p>
-          <input
+      <div
+        className={`todoItem ${this.state.flag ? "tododel" : ""}`}
+        style={this.getTodoStyle()}
+      >
+        <p onClick={this.props.markComplete.bind(this, id)}>
+          {/* <input
             type="checkbox"
             defaultChecked={this.props.todo.completed}
             onChange={this.props.markComplete.bind(this, id)}
-          />{" "}
+          />{" "} */}
           {task}
           <button
             style={this.getCrossStyle()}
-            onClick={this.props.delTask.bind(this, id)}
+            onClick={this.delTaskEvent.bind(this, id)}
           >
             -
           </button>
