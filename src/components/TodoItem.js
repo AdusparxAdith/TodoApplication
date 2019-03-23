@@ -62,7 +62,10 @@ class TodoItem extends Component {
   render() {
     const { id, task } = this.props.todo;
     return (
-      <Hammer onSwipe={this.delTaskEvent.bind(this, id)}>
+      <Hammer
+        onSwipe={this.delTaskEvent.bind(this, id)}
+        direction="DIRECTION_RIGHT"
+      >
         <div
           className={`todoItem ${this.state.flag ? "tododel" : ""}`}
           style={this.getTodoStyle()}
