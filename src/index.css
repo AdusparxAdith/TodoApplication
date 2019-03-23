@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Overlock");
 html {
   font-family: "Overlock", cursive;
+  outline: none;
+  user-select: none;
 }
 body {
   margin: 0;
