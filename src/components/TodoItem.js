@@ -86,7 +86,7 @@ class TodoItem extends Component {
           style={this.getTodoStyle()}
         >
           {" "}
-          <img src={url} width="20px" style={splImgStyle} />
+          <img src={url} alt="Reward" width="20px" style={splImgStyle} />
           <p style={splPStyle}>Get reward</p>
           <p>
             <input

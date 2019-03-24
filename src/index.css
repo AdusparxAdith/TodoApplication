@@ -18,17 +18,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.btn {
-  opacity: 0.8;
-  transition: 0.3s;
-}
-.btn:hover {
-  opacity: 1.2;
-}
 
 button,
 input {
   outline: none;
+}
+
+/* ADDTOTO */
+
+.submitBtn {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.submitBtn:hover {
+  opacity: 1.2;
 }
 
 .addTodo::placeholder {
@@ -46,20 +49,25 @@ input {
 .greentodo input {
   color: #16a085;
 }
+
 .yellowtodo::placeholder,
 .yellowtodo input,
 .blacktodo::placeholder,
 .blacktodo input {
   color: #000;
 }
+
 .bluetodo::placeholder,
 .bluetodo input {
   color: #2d98da;
 }
+
 .purpletodo::placeholder,
 .purpletodo input {
   color: #8854d0;
 }
+
+/* TODOITEM */
 
 @keyframes delete {
   from {
@@ -85,15 +93,13 @@ input {
   background-color: #f2eded;
   cursor: pointer;
 }
+
+/* FOOTER */
+
 .footer p {
   margin-top: 7px;
 }
-img {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  right: 50%;
-}
+
 .themeBarItem:hover {
   display: inline-block;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -110,6 +116,7 @@ img {
 .themeBarItem:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.13);
+  outline: 0;
 }
 
 .themeBarItem:focus {
@@ -118,6 +125,15 @@ img {
 
 .themeBarItem {
   border: 2px solid white;
+}
+
+/* HEADER */
+
+img {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  right: 50%;
 }
 
 .secretGlow h1 {

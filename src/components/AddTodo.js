@@ -61,7 +61,7 @@ export default class AddTodo extends React.Component {
         <input
           type="submit"
           value="submit"
-          className={"btn"}
+          className={"submitBtn"}
           style={this.getSubmitStyle()}
           onClick={this.onSubmit}
         />

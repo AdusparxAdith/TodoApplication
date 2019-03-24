@@ -1,22 +1,11 @@
 import React from "react";
 import ThemeBar from "../ThemeBar";
-import Hammer from "react-hammerjs";
 
 export default class Footer extends React.Component {
   render() {
     console.log(this.props);
     const themeArr = require("../../resources/themes");
-    const ThemeBarStyle = {
-      marginTop: "10px",
-      marginBottom: "10px",
-      clear: "both",
-      margin: "0",
-      position: "absolute",
-      textAlign: "center",
-      bottom: "55px",
-      right: "0",
-      left: "0"
-    };
+
     return (
       <div className="footer" style={footerStyle}>
         <ThemeBar themeArr={themeArr} changeTheme={this.props.changeTheme} />
