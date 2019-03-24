@@ -42,7 +42,7 @@ export default class Header extends React.Component {
             </header>
           </Hammer>
           <img
-            className={this.state.secret ? "imgShake" : ""}
+            className={this.state.secret ? "imgShake" : "headImg"}
             src={url}
             alt="Failed to load"
             width="30px"

@@ -25,12 +25,18 @@ input {
 }
 
 /* ADDTOTO */
-
-.submitBtn {
+.sbtn img {
+  position: absolute;
+  right: 10px;
+  top: 146px;
+  opacity: 0.9;
+  transition: 0.1s;
+}
+.sbtn {
   opacity: 0.8;
   transition: 0.3s;
 }
-.submitBtn:hover {
+.sbtn:hover {
   opacity: 1.2;
 }
 
@@ -132,7 +138,7 @@ input {
 
 /* HEADER */
 
-img {
+.headImg {
   position: absolute;
   top: 15px;
   left: 50%;

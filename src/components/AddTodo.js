@@ -15,11 +15,9 @@ export default class AddTodo extends React.Component {
     return {
       background,
       color,
-      flex: "1",
       display: "inline-block",
       border: "none",
-      fontSize: "120%",
-      padding: "7px 20px",
+      padding: "1px 25px",
       cursor: "pointer",
       fontFamily: "Overlock",
       transition: "1s"
@@ -58,13 +56,23 @@ export default class AddTodo extends React.Component {
           value={this.state.title}
           onChange={this.takeInput}
         />
-        <input
+        {/* <input
           type="submit"
           value="submit"
           className={"submitBtn"}
           style={this.getSubmitStyle()}
           onClick={this.onSubmit}
-        />
+        /> */}
+        <div
+          className="sbtn"
+          style={this.getSubmitStyle()}
+          onClick={this.onSubmit}
+        >
+          <img
+            src="http://www-scf.usc.edu/~mdemirji/acad275/images/arrow.png"
+            width="30px"
+          />
+        </div>
       </form>
     );
   }
