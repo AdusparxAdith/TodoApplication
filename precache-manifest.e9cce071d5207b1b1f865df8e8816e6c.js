@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/TodoApplication/static/js/runtime~main.cf8d2b92.js"
   },
   {
-    "revision": "0e14aa19f14d53243adb",
-    "url": "/TodoApplication/static/js/main.a90d48e1.chunk.js"
+    "revision": "c08366cb57f87d08a24b",
+    "url": "/TodoApplication/static/js/main.6b9bdba0.chunk.js"
   },
   {
     "revision": "306b123323dde0f4b8d7",
     "url": "/TodoApplication/static/js/2.aea261df.chunk.js"
   },
   {
-    "revision": "0e14aa19f14d53243adb",
-    "url": "/TodoApplication/static/css/main.f9fc24cf.chunk.css"
+    "revision": "c08366cb57f87d08a24b",
+    "url": "/TodoApplication/static/css/main.cf6c2816.chunk.css"
   },
   {
-    "revision": "1fa19792d22c895aa9f3d2c242ecd60c",
+    "revision": "2a2c1018ba8ea5ef04e662c08744eb14",
     "url": "/TodoApplication/index.html"
   }
 ];
