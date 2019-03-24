@@ -1,5 +1,4 @@
 import React from "react";
-import ThemeBar from "../ThemeBar";
 import Hammer from "react-hammerjs";
 const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/logo.png");
 
@@ -27,12 +26,8 @@ export default class Header extends React.Component {
   };
 
   render() {
-    const themeArr = require("../../resources/themes");
     return (
       <div>
-        <div className="themeBar" style={themeBarStyle}>
-          <ThemeBar themeArr={themeArr} changeTheme={this.props.changeTheme} />
-        </div>
         <Hammer onDoubleTap={this.secretCSS}>
           <header
             className={this.state.secret ? "secretGlow" : "secretGlowR"}
@@ -53,12 +48,3 @@ export default class Header extends React.Component {
     );
   }
 }
-
-const themeBarStyle = {
-  textAlign: "center",
-  fontStyle: "oblique",
-  position: "absolute",
-  bottom: "50px",
-  right: "0",
-  left: "0"
-};

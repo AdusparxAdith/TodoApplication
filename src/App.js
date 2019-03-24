@@ -100,7 +100,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Header
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}
@@ -112,8 +112,12 @@ class App extends Component {
           delTask={this.delTask}
           theme={this.state.theme.clearButton}
         />
-        <Footer />
-      </div>
+
+        <Footer
+          theme={this.state.theme.header}
+          changeTheme={this.changeTheme}
+        />
+      </React.Fragment>
     );
   }
 }

@@ -18,7 +18,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <button
-        className="themeBar"
+        className="themeBarItem"
         style={this.getButtonStyle()}
         onClick={this.props.changeTheme.bind(this, this.props.theme.id)}
       />

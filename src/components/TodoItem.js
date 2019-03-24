@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Hammer from "react-hammerjs";
+const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/reward.png");
 
 class TodoItem extends Component {
   constructor() {
@@ -48,7 +49,7 @@ class TodoItem extends Component {
     }
     // SPECIAL TASK RETURN
     return {
-      background: "#f1f2f6",
+      background: "#ffeaa7",
       border: "1.5px solid #FFCF40",
       padding: "2px 12px",
       color: this.props.todo.completed ? this.props.theme.line : "black",
@@ -60,6 +61,21 @@ class TodoItem extends Component {
   };
 
   render() {
+    const splImgStyle = {
+      display: this.props.todo.special ? "inline" : "none",
+      position: "absolute",
+      left: "0px",
+      top: "-10px"
+    };
+    const splPStyle = {
+      display: this.props.todo.special ? "inline" : "none",
+      position: "absolute",
+      left: "25px",
+      top: "-12px",
+      fontStyle: "oblique",
+      fontFamily: "cursive",
+      fontSize: "0.7rem"
+    };
     const { id, task } = this.props.todo;
     return (
       <Hammer
@@ -70,6 +86,9 @@ class TodoItem extends Component {
           className={`todoItem ${this.state.flag ? "tododel" : ""}`}
           style={this.getTodoStyle()}
         >
+          {" "}
+          <img src={url} width="20px" style={splImgStyle} />
+          <p style={splPStyle}>Get reward</p>
           <p>
             <input
               type="checkbox"

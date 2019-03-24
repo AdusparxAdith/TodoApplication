@@ -1,7 +1,7 @@
 import React from "react";
 import ThemeItem from "./ThemeItem";
 
-export default class Header extends React.Component {
+export default class ThemeBar extends React.Component {
   render() {
     return this.props.themeArr.map(theme => (
       <ThemeItem
