@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import uuid from "uuid";
 
 export default class SortBar extends Component {
+  showHandle = item => {
+    this.props.showTodos(item);
+  };
   render() {
     const barItem = {
       flex: "1",
@@ -15,7 +18,7 @@ export default class SortBar extends Component {
         className="barItem"
         key={uuid.v4()}
         style={barItem}
-        onClick={this.props.showTodos.bind(this, item.toLowerCase())}
+        onClick={this.showHandle.bind(this, item.toLowerCase())}
       >
         <p style={barPara}>{item}</p>
       </div>

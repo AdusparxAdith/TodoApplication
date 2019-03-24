@@ -100,8 +100,8 @@ input {
   cursor: pointer;
 }
 /* SORT BAR */
-.barItem:focus {
-  background: black;
+.barItem:active {
+  text-decoration: underline;
 }
 /* FOOTER */
 

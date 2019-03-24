@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
         <p>
           ~Made with love, by{" "}
           <span style={{ color: this.props.theme.background }}>Adusparx</span> ~
-          v4.0
+          v5.0
         </p>
       </div>
     );
