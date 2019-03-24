@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Hammer from "react-hammerjs";
-const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/reward.png");
+const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/images/reward.png");
 
 class TodoItem extends Component {
   constructor() {

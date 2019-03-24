@@ -1,4 +1,5 @@
 import React from "react";
+const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/images/arrow.png");
 
 export default class AddTodo extends React.Component {
   state = {
@@ -68,10 +69,7 @@ export default class AddTodo extends React.Component {
           style={this.getSubmitStyle()}
           onClick={this.onSubmit}
         >
-          <img
-            src="http://www-scf.usc.edu/~mdemirji/acad275/images/arrow.png"
-            width="30px"
-          />
+          <img src={url} alt="submit" width="30px" />
         </div>
       </form>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import Hammer from "react-hammerjs";
 import SortBar from "../SortBar";
 
-const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/logo.png");
+const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/images/logo.png");
 
 export default class Header extends React.Component {
   state = {
