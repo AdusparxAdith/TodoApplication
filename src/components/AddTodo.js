@@ -69,7 +69,7 @@ export default class AddTodo extends React.Component {
           style={this.getSubmitStyle()}
           onClick={this.onSubmit}
         >
-          <img src={url} alt="submit" width="30px" />
+          <img className="sbtnImg" src={url} alt="submit" width="30px" />
         </div>
       </form>
     );
