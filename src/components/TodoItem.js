@@ -40,7 +40,7 @@ class TodoItem extends Component {
     if (!this.props.todo.special) {
       return {
         padding: "2px 12px",
-        borderBottom: "1px #ccc dotted",
+        borderBottom: "1px #ccc solid",
         color: this.props.todo.completed ? this.props.theme.line : "black",
         textDecoration: this.props.todo.completed ? "line-through" : "none",
         fontSize: "110%",

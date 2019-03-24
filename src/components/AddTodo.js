@@ -56,13 +56,13 @@ export default class AddTodo extends React.Component {
           value={this.state.title}
           onChange={this.takeInput}
         />
-        {/* <input
+        <input
           type="submit"
           value="submit"
-          className={"submitBtn"}
-          style={this.getSubmitStyle()}
+          className={"sbtnInput"}
+          style={{ display: "none" }}
           onClick={this.onSubmit}
-        /> */}
+        />
         <div
           className="sbtn"
           style={this.getSubmitStyle()}
