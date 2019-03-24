@@ -93,7 +93,10 @@ input {
   background-color: #f2eded;
   cursor: pointer;
 }
-
+/* SORT BAR */
+.barItem:focus {
+  background: black;
+}
 /* FOOTER */
 
 .footer p {

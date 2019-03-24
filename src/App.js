@@ -23,13 +23,22 @@ class App extends Component {
         line: "#fc5c65"
       },
       placeholder: "redtodo"
-    }
+    },
+    showList: []
   };
 
   /////////////////////////////////////////////////////// LIFE-CYCLE METHODS
   componentDidMount() {
+    this.showTodos("all");
+  }
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("storedTodos", JSON.stringify(nextState.todos));
+    localStorage.setItem("storedTheme", JSON.stringify(nextState.theme));
+    localStorage.setItem("timestamp", Date.now());
+  }
+
+  componentWillMount() {
     let currentDay = new Date();
-    console.log(currentDay);
     let updatedDay = new Date(localStorage.getItem("updatedOn"));
     if (currentDay - updatedDay >= 43200000) {
       const specialTodos = require("./resources/specialTodos");
@@ -40,14 +49,7 @@ class App extends Component {
       this.setState({ todos: [...this.state.todos, splTodo] });
       localStorage.setItem("updatedOn", currentDay);
     }
-  }
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem("storedTodos", JSON.stringify(nextState.todos));
-    localStorage.setItem("storedTheme", JSON.stringify(nextState.theme));
-    localStorage.setItem("timestamp", Date.now());
-  }
 
-  componentWillMount() {
     localStorage.getItem("storedTodos") &&
       this.setState({
         todos: JSON.parse(localStorage.getItem("storedTodos"))
@@ -72,6 +74,7 @@ class App extends Component {
       theme: getTheme()
     });
   };
+
   addTodo = title => {
     const newTodo = {
       id: uuid.v4(),
@@ -79,12 +82,16 @@ class App extends Component {
       completed: false
     };
 
-    this.setState({ todos: this.state.todos.concat(newTodo) });
+    this.setState({
+      todos: this.state.todos.concat(newTodo),
+      showList: this.state.todos.concat(newTodo)
+    });
   };
 
   delTask = id => {
     this.setState({
-      todos: [...this.state.todos.filter(todo => todo.id !== id)]
+      todos: [...this.state.todos.filter(todo => todo.id !== id)],
+      showList: [...this.state.showList.filter(todo => todo.id !== id)]
     });
   };
 
@@ -98,16 +105,33 @@ class App extends Component {
       })
     });
   };
+
+  showTodos = status => {
+    if (status === "completed") {
+      this.setState({
+        showList: [...this.state.todos.filter(todo => todo.completed === true)]
+      });
+    } else if (status === "all") {
+      this.setState({
+        showList: [...this.state.todos]
+      });
+    } else if (status === "pending") {
+      this.setState({
+        showList: [...this.state.todos.filter(todo => todo.completed === false)]
+      });
+    }
+  };
   render() {
     return (
       <React.Fragment>
         <Header
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}
+          showTodos={this.showTodos}
         />
         <AddTodo addTodo={this.addTodo} theme={this.state.theme} />
         <TodoList
-          tasks={this.state.todos}
+          tasks={this.state.showList}
           markComplete={this.markComplete}
           delTask={this.delTask}
           theme={this.state.theme.clearButton}

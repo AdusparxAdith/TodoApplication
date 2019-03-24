@@ -3,7 +3,6 @@ import ThemeBar from "../ThemeBar";
 
 export default class Footer extends React.Component {
   render() {
-    console.log(this.props);
     const themeArr = require("../../resources/themes");
 
     return (
@@ -12,7 +11,7 @@ export default class Footer extends React.Component {
         <p>
           ~Made with love, by{" "}
           <span style={{ color: this.props.theme.background }}>Adusparx</span> ~
-          v3.0
+          v4.0
         </p>
       </div>
     );
