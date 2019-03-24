@@ -73,7 +73,6 @@ class TodoItem extends Component {
       left: "25px",
       top: "-12px",
       fontStyle: "oblique",
-      fontFamily: "cursive",
       fontSize: "0.7rem"
     };
     const { id, task } = this.props.todo;
