@@ -24,18 +24,12 @@ class App extends Component {
       },
       placeholder: "redtodo"
     },
-    showList: []
+    showList: [],
+    statusBar: ["all", "completed", "pending"],
+    index: 1
   };
 
   /////////////////////////////////////////////////////// LIFE-CYCLE METHODS
-  componentDidMount() {
-    this.showTodos("all");
-  }
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem("storedTodos", JSON.stringify(nextState.todos));
-    localStorage.setItem("storedTheme", JSON.stringify(nextState.theme));
-    localStorage.setItem("timestamp", Date.now());
-  }
 
   componentWillMount() {
     let currentDay = new Date();
@@ -60,6 +54,15 @@ class App extends Component {
       });
   }
 
+  componentDidMount() {
+    this.showTodos("all");
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("storedTodos", JSON.stringify(nextState.todos));
+    localStorage.setItem("storedTheme", JSON.stringify(nextState.theme));
+    localStorage.setItem("timestamp", Date.now());
+  }
   /////////////////////////////////////////////////////// CUSTOM METHODS
   changeTheme = id => {
     const themeArr = require("./resources/themes");
@@ -109,25 +112,46 @@ class App extends Component {
   showTodos = status => {
     if (status === "completed") {
       this.setState({
-        showList: [...this.state.todos.filter(todo => todo.completed === true)]
+        showList: [...this.state.todos.filter(todo => todo.completed === true)],
+        index: 1
       });
     } else if (status === "all") {
       this.setState({
-        showList: [...this.state.todos]
+        showList: [...this.state.todos],
+        index: 0
       });
     } else if (status === "pending") {
       this.setState({
-        showList: [...this.state.todos.filter(todo => todo.completed === false)]
+        showList: [
+          ...this.state.todos.filter(todo => todo.completed === false)
+        ],
+        index: 2
       });
+    }
+  };
+
+  toggleScreen = direction => {
+    if (direction === "right") {
+      if (this.state.index !== 2) {
+        this.setState({ index: this.state.index + 1 });
+        this.showTodos(this.state.statusBar[this.state.index]);
+      }
+    } else if (direction === "left") {
+      if (this.state.index !== 0) {
+        this.setState({ index: this.state.index - 1 });
+        this.showTodos(this.state.statusBar[this.state.index]);
+      }
     }
   };
   render() {
     return (
       <React.Fragment>
+        <div className="heyyy" />
         <Header
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}
           showTodos={this.showTodos}
+          toggleScreen={this.toggleScreen}
         />
         <AddTodo addTodo={this.addTodo} theme={this.state.theme} />
         <TodoList
@@ -136,7 +160,6 @@ class App extends Component {
           delTask={this.delTask}
           theme={this.state.theme.clearButton}
         />
-
         <Footer
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}

@@ -27,11 +27,23 @@ export default class Header extends React.Component {
     };
   };
 
+  handleSwipe = event => {
+    if (event.direction === 4) {
+      this.props.toggleScreen("right");
+    } else if (event.direction === 2) {
+      this.props.toggleScreen("left");
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
         <div>
-          <Hammer onDoubleTap={this.secretCSS}>
+          <Hammer
+            onDoubleTap={this.secretCSS}
+            onSwipe={this.handleSwipe}
+            direction="DIRECTION_ALL"
+          >
             <header
               className={this.state.secret ? "secretGlow" : "secretGlowR"}
               style={this.getHeaderStyle()}
