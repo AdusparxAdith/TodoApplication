@@ -148,6 +148,7 @@ class App extends Component {
       <React.Fragment>
         <div className="heyyy" />
         <Header
+          index={this.state.index}
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}
           showTodos={this.showTodos}

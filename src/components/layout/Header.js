@@ -63,6 +63,7 @@ export default class Header extends React.Component {
 
         <div style={{ display: "flex" }}>
           <SortBar
+            index={this.props.index}
             theme={this.props.theme}
             items={["All", "Completed", "Pending"]}
             showTodos={this.props.showTodos}
