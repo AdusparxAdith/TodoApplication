@@ -100,9 +100,6 @@ input {
   cursor: pointer;
 }
 /* SORT BAR */
-.barItem:active {
-  text-decoration: underline;
-}
 
 /* FOOTER */
 
