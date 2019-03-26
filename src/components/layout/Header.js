@@ -29,9 +29,9 @@ export default class Header extends React.Component {
 
   handleSwipe = event => {
     if (event.direction === 4) {
-      this.props.toggleScreen("right");
-    } else if (event.direction === 2) {
       this.props.toggleScreen("left");
+    } else if (event.direction === 2) {
+      this.props.toggleScreen("right");
     }
   };
 

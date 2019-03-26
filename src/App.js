@@ -164,6 +164,7 @@ class App extends Component {
         <Footer
           theme={this.state.theme.header}
           changeTheme={this.changeTheme}
+          toggleScreen={this.toggleScreen}
         />
       </React.Fragment>
     );
