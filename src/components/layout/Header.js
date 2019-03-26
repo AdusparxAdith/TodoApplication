@@ -1,5 +1,5 @@
 import React from "react";
-import Hammer from "react-hammerjs";
+// import Hammer from "react-hammerjs";
 import SortBar from "../SortBar";
 
 const url = require("C:/Users/Adusparx/Desktop/React Projects/src/resources/images/logo.png");
@@ -27,32 +27,32 @@ export default class Header extends React.Component {
     };
   };
 
-  handleSwipe = event => {
-    if (event.direction === 4) {
-      this.props.toggleScreen("left");
-    } else if (event.direction === 2) {
-      this.props.toggleScreen("right");
-    }
-  };
+  // handleSwipe = event => {
+  //   if (event.direction === 4) {
+  //     this.props.toggleScreen("left");
+  //   } else if (event.direction === 2) {
+  //     this.props.toggleScreen("right");
+  //   }
+  // };
 
   render() {
     return (
       <React.Fragment>
         <div>
-          <Hammer
+          {/* <Hammer
             onDoubleTap={this.secretCSS}
             onSwipe={this.handleSwipe}
             direction="DIRECTION_ALL"
+          > */}
+          <header
+            className={this.state.secret ? "secretGlow" : "secretGlowR"}
+            style={this.getHeaderStyle()}
           >
-            <header
-              className={this.state.secret ? "secretGlow" : "secretGlowR"}
-              style={this.getHeaderStyle()}
-            >
-              <h1>
-                Todo<span id={this.state.secret ? "spanClass" : ""}>L</span>ist
-              </h1>
-            </header>
-          </Hammer>
+            <h1>
+              Todo<span id={this.state.secret ? "spanClass" : ""}>L</span>ist
+            </h1>
+          </header>
+          {/* </Hammer> */}
           <img
             className={this.state.secret ? "imgShake headImg" : "headImg"}
             src={url}

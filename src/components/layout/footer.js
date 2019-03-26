@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
           <p>
             ~Made with love, by{" "}
             <span style={{ color: this.props.theme.background }}>Adusparx</span>{" "}
-            ~ v5.0
+            ~ v5.1
           </p>
         </div>
       </Hammer>
@@ -34,7 +34,7 @@ const footerStyle = {
   clear: "both",
   position: "absolute",
   textAlign: "center",
-  height: "50%",
+  height: "100%",
   right: "0",
   marginTop: "10px",
   left: "0"
